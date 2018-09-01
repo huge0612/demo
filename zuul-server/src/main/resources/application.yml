@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: api-gateway
+zuul:
+  routes:
+    demo:
+      path: /provider/**
+      url: http://127.0.0.1:8080/
+  add-host-header: true
